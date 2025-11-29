@@ -5,16 +5,30 @@ import heroImage from "../../assets/images/2.jpg";
 const Hero = () => {
   return (
     <div className="hero" id="home">
-      <img src={heroImage} alt="Hero" />
-      <h1><span>Chào mừng đến với Portfolio của tôi</span></h1>
-      <h2><span>Tôi là Nguyễn Thị Thanh Thúy</span>, một Full Stack Developer tại Việt Nam</h2>
-      <p>
-        Tôi là một developer đầy đam mê với khả năng tạo ra những ứng dụng web
-        tuyệt đẹp và chuyên nghiệp.
-      </p>
-      <div className="hero-action">
-        <div className="hero-connect">Kết nối với tôi!</div>
-        <div className="hero-resume">Xem CV của tôi!</div>
+      <div className="hero-image-container">
+        <img src={heroImage} alt="Nguyễn Thị Thanh Thúy" />
+      </div>
+      <div className="hero-content">
+        <div className="hero-badge">
+          <span>✨</span>
+          <span>Available for opportunities</span>
+        </div>
+        <h1>
+          <span>Xin chào, tôi là</span>
+          <span>Nguyễn Thị Thanh Thúy</span>
+        </h1>
+        <h2>
+          <span>Full Stack Developer</span> tại Việt Nam
+        </h2>
+        <p>
+          Tôi chuyên tạo ra những trải nghiệm web hiện đại, tối ưu và đẹp mắt.
+          Với niềm đam mê mãnh liệt về công nghệ, tôi luôn tìm cách đưa những ý tưởng sáng tạo 
+          vào thực tế thông qua code.
+        </p>
+        <div className="hero-action">
+          <button className="hero-connect">Kết nối với tôi</button>
+          <button className="hero-resume">Xem CV</button>
+        </div>
       </div>
     </div>
   );

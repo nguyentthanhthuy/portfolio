@@ -80,26 +80,55 @@
 }
 
 .contact-right input {
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     width: 700px;
     height: 78px;
     padding-left: 20px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #DBDBD8;
     font-family: Outfit;
     font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-right input:focus {
+    outline: none;
+    border-color: rgba(218, 124, 37, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(218, 124, 37, 0.2);
+    transform: translateY(-2px);
+}
+
+.contact-right input::placeholder {
+    color: #888888;
 }
 
 .contact-right textarea{
-    width: 650px;
-    border: none;
+    width: 700px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     padding: 25px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #DBDBD8;
     font-family: Outfit;
     font-size: 20px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.contact-right textarea:focus {
+    outline: none;
+    border-color: rgba(218, 124, 37, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(218, 124, 37, 0.2);
+    transform: translateY(-2px);
+}
+
+.contact-right textarea::placeholder {
+    color: #888888;
 }
 
 .contact-submit{
@@ -108,15 +137,35 @@
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
     font-size: 22px;
+    font-weight: 600;
     padding: 20px 60px;
     margin-bottom: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px rgba(218, 124, 37, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.contact-submit:hover::before {
+    left: 100%;
 }
 
 .contact-submit:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(218, 124, 37, 0.6),
+                0 0 40px rgba(185, 35, 225, 0.4);
 }
 
 /* Responsive Design */
